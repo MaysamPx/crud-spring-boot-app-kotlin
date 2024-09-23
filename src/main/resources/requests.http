@@ -1,0 +1,32 @@
+### Register Bread item
+POST http://localhost:8081/item
+Content-Type: application/json
+
+{
+  "name": "Bread",
+  "price": 2.5
+}
+
+### Register Croissant item
+POST http://localhost:8081/item
+Content-Type: application/json
+
+{
+  "name": "Croissant",
+  "price": 0.99
+}
+
+
+### Register Cola item
+POST http://localhost:8081/item
+Content-Type: application/json
+
+{
+  "name": "Cola",
+  "price": 3.5
+}
+
+
+
+### Get all the items
+GET http://localhost:8081/
