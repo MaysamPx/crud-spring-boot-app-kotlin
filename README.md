@@ -5,3 +5,5 @@
 - JDK 21 (Amazon Corretto | OpenJDK)
 - Spring Boot
 - Gradle
+- JUnit 5
+- Mockito
