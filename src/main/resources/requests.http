@@ -27,6 +27,8 @@ Content-Type: application/json
 }
 
 
-
 ### Get all the items
 GET http://localhost:8081/
+
+### Get the item by its id
+GET http://localhost:8081/3e7a68ea-60aa-4b09-bc9f-5135757e8f60
