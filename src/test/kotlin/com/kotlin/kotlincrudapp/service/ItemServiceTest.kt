@@ -28,9 +28,9 @@ class ItemServiceTest {
         val items = itemService.findItems()
 
         assertEquals(3, items.size)
-        assertEquals("Bread", items.get(0).name)
-        assertEquals("Cola", items.get(1).name)
-        assertEquals("Croissant", items.get(2).name)
+        assertEquals("Bread", items[0].name)
+        assertEquals("Cola", items[1].name)
+        assertEquals("Croissant", items[2].name)
 
     }
 
