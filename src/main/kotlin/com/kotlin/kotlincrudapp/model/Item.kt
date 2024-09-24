@@ -4,4 +4,4 @@ import org.springframework.data.annotation.Id
 import org.springframework.data.relational.core.mapping.Table
 
 @Table("ITEMS")
-data class Item(@Id var id: String?, val name: String, val price: Double)
+data class Item(@Id var id: String?, val name: String, val price: Double, val type : ItemType)

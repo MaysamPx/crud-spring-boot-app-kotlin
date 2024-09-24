@@ -4,7 +4,8 @@ Content-Type: application/json
 
 {
   "name": "Bread",
-  "price": 2.5
+  "price": 2.5,
+  "type": "BAKERY"
 }
 
 ### Register Croissant item
@@ -13,7 +14,8 @@ Content-Type: application/json
 
 {
   "name": "Croissant",
-  "price": 0.99
+  "price": 0.99,
+  "type": "BAKERY"
 }
 
 
@@ -23,7 +25,8 @@ Content-Type: application/json
 
 {
   "name": "Cola",
-  "price": 3.5
+  "price": 3.5,
+  "type": "DRINKS"
 }
 
 
