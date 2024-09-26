@@ -1,3 +1,5 @@
+### <------------------- Items ------------------->
+
 ### Register Bread item
 POST http://localhost:8081/item
 Content-Type: application/json
@@ -34,4 +36,23 @@ Content-Type: application/json
 GET http://localhost:8081/
 
 ### Get the item by its id
-GET http://localhost:8081/3e7a68ea-60aa-4b09-bc9f-5135757e8f60
+GET http://localhost:8081/{{id}}
+
+### <------------------- Orders ------------------->
+
+### Register a new order
+POST http://localhost:8081/orders
+Content-Type: application/json
+
+{
+  "itemId": "5da473c1-4cd1-4adf-a2f0-73f8f2b22c1f",
+  "price": "3.5",
+  "amount": 2
+}
+
+### Get all the orders
+GET http://localhost:8081/orders
+
+### Get Order by ID
+@id = 0bbecc3a-22dc-4f05-a0d1-640916337b15
+GET localhost:8081/orders/{{id}}
