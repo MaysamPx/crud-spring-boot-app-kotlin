@@ -1,5 +1,5 @@
 # Kotlin CRUD App
-While this a simple repo to try some basic practices with a focus on Kotlin, Spring Boot, JUnit, Mockito, etc., I aim to build up a grocery app with some useful features.
+While this is a pretty simple repo to try some basic practices with a focus on `Kotlin`, `Spring Boot`, `JUnit`, `Mockito`, etc., I aim to build up a **grocery app** with some useful features.
 
 ## Tools and Technologies
 - Kotlin (2+)
