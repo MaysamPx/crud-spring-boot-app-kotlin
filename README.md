@@ -9,6 +9,7 @@ While this is a pretty simple repo to try some basic practices with a focus on `
 - JUnit 5
 - Mockito
 - PostgreSQL 
+- Flyway (DB migrations)
 
 
 ## How to run 
