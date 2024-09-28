@@ -10,6 +10,7 @@ While this is a pretty simple repo to try some basic practices with a focus on `
 - Mockito
 - PostgreSQL (V16+)
 - Flyway (DB migrations)
+- TestContainers
 
 
 ## How to run 
