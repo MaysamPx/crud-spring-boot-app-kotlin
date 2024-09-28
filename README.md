@@ -2,13 +2,13 @@
 While this is a pretty simple repo to try some basic practices with a focus on `Kotlin`, `Spring Boot`, `JUnit`, `Mockito`, etc., I aim to build up a **grocery app** with some useful features.
 
 ## Tools and Technologies
-- Kotlin (2+)
+- Kotlin (V2+)
 - JDK 21 (Amazon Corretto | OpenJDK)
-- Spring Boot
+- Spring Boot (V 3+)
 - Gradle
-- JUnit 5
+- JUnit V5
 - Mockito
-- PostgreSQL 
+- PostgreSQL (V16+)
 - Flyway (DB migrations)
 
 
