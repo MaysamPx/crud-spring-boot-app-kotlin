@@ -14,5 +14,6 @@ While this is a pretty simple repo to try some basic practices with a focus on `
 
 ## How to run 
 1. Check out the repo on your client 
-2. Ensure Kotlin, JDK 21, Intellij idea (or your preferred IDE) are installed and ready to use. 
+2. Ensure Kotlin, JDK 21, Intellij idea (or your preferred IDE), and PostgreSQL 16+ are installed and ready to use. 
+3. Create a DB on your local postgre instance (DB name -> `grocery)
 3. Run the app `KotlinCrudAppApplication`
