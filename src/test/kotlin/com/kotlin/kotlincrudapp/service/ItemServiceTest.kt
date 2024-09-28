@@ -66,8 +66,8 @@ class ItemServiceTest {
         val item = itemService.findItemById(id)
 
         assertNotNull(item)
-        assertEquals(id, item[0].id)
-        assertEquals("Bread", item[0].name)
+        assertEquals(id, item.id)
+        assertEquals("Bread", item.name)
     }
 
     @Test

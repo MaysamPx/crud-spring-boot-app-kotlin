@@ -1,4 +1,6 @@
 project.ext.set("postgresqlVersion", "42.7.3")
+project.ext.set("testContainersVersion", "1.18.3")
+
 plugins {
     kotlin("jvm") version "1.9.25"
     kotlin("plugin.spring") version "1.9.25"
@@ -32,6 +34,8 @@ dependencies {
     implementation("org.flywaydb:flyway-database-postgresql")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
+    testImplementation("org.testcontainers:junit-jupiter:${project.property("testContainersVersion")}")
+    testImplementation("org.testcontainers:postgresql:${project.property("testContainersVersion")}")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 
