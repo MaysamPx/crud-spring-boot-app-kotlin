@@ -3,25 +3,40 @@ package com.kotlin.kotlincrudapp.service
 import com.kotlin.kotlincrudapp.model.Item
 import com.kotlin.kotlincrudapp.model.ItemType
 import com.kotlin.kotlincrudapp.repository.ItemRepository
+import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Test
-import org.mockito.Mockito.*
+import org.junit.jupiter.api.extension.ExtendWith
+import org.mockito.Mock
+import org.mockito.Mockito.verify
+import org.mockito.Mockito.`when`
+import org.mockito.MockitoAnnotations
+import org.mockito.junit.jupiter.MockitoExtension
 import java.util.*
 import java.util.UUID.randomUUID
 import kotlin.test.assertEquals
 import kotlin.test.assertNotNull
 
+@ExtendWith(MockitoExtension::class)
 class ItemServiceTest {
-    private val itemRepository: ItemRepository = mock(ItemRepository::class.java)
-    private val itemService = ItemService(itemRepository)
+
+    @Mock
+    private lateinit var itemRepository: ItemRepository
+    private lateinit var itemService: ItemService
+
+    @BeforeEach
+    fun setup() {
+        MockitoAnnotations.openMocks(this)
+        itemService = ItemService(itemRepository)
+    }
 
     @Test
     @DisplayName("When call findItems then return all items")
     fun testFindItemsReturnsAllItems() {
         val mockItems = listOf(
-            Item(randomUUID().toString(), "Bread", 2.5, ItemType.BAKERY),
-            Item(randomUUID().toString(), "Cola", 3.5, ItemType.DRINKS),
-            Item(randomUUID().toString(), "Croissant", 0.99, ItemType.BAKERY)
+            Item(randomUUID(), "Bread", 2.5, ItemType.BAKERY),
+            Item(randomUUID(), "Cola", 3.5, ItemType.DRINKS),
+            Item(randomUUID(), "Croissant", 0.99, ItemType.BAKERY)
         )
 
         `when`(itemRepository.findAll()).thenReturn(mockItems)
@@ -43,7 +58,7 @@ class ItemServiceTest {
     @Test
     @DisplayName("When call findItemById then return item by id")
     fun `should return item by id` () {
-        val id: String = randomUUID().toString()
+        val id: UUID = randomUUID()
         val mockItem = Item(id, "Bread", 2.5, ItemType.BAKERY)
 
         `when`(itemRepository.findById(id)).thenReturn(Optional.of(mockItem))
@@ -58,7 +73,7 @@ class ItemServiceTest {
     @Test
     @DisplayName("When call save then persist item")
     fun testSaveItem() {
-        val id: String = randomUUID().toString()
+        val id: UUID = randomUUID()
         val newItem = Item(id, "Bread", 2.5, ItemType.BAKERY)
 
         itemService.save(newItem)

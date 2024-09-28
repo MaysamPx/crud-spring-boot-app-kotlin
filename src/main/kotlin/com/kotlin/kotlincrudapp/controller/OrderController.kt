@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RestController
+import java.util.UUID
 
 @RestController
 class OrderController(var orderService: OrderService) {
@@ -14,7 +15,7 @@ class OrderController(var orderService: OrderService) {
     fun getAllOrders(): List<Order> = orderService.findOrders()
 
     @GetMapping("/orders/{id}")
-    fun getOrderById(@PathVariable("id") id : String): List<Order> = orderService.findOrderByID(id)
+    fun getOrderById(@PathVariable("id") id : UUID): List<Order> = orderService.findOrderByID(id)
 
     @PostMapping("/orders")
     fun submitOrder(@RequestBody order: Order) {
