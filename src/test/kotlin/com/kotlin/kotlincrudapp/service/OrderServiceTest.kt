@@ -28,7 +28,7 @@ class OrderServiceTest {
     @BeforeEach
     fun setup() {
         MockitoAnnotations.openMocks(this)
-        orderService = OrderService(orderRepository) // Create service with mocked repo
+        orderService = OrderService(orderRepository)
     }
 
     @Test

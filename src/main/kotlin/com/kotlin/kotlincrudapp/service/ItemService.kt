@@ -8,14 +8,9 @@ import java.util.*
 
 @Service
 class ItemService(val itemRepository: ItemRepository) {
-
     fun findItems(): List<Item> = itemRepository.findAll().toList()
-
     fun findItemById(id: UUID): Item = itemRepository.findById(id).orElseThrow { ItemNotFoundException("Item not found") }
-
     fun save(item: Item) {
         itemRepository.save(item)
     }
-
-    
 }
